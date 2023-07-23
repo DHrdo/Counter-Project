@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/DHrdo/Counter-Project">
-    <img src="/assets/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Counter</h3>
@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://counter-project-mu.vercel.app)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,9 +92,9 @@
 
 ### Built With
 
-* HTML
-* CSS
-* JAVASCRIPT
+* [![HTML][html.com]][Html-url]
+* [![CSS][css.com]][css-url]
+* [![Javascript][Javascript.com]][Javascript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,6 +185,12 @@ Project Link: [https://github.com/DHrdo/Counter-Project](https://github.com/DHrd
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
+[Javascript.com]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[Javascript-url]: https://javascript.com/
+[html.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[html-url]: https://www.w3.org
+[css.com]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[css-url]: https://www.w3.org
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00

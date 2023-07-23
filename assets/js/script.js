@@ -1,25 +1,36 @@
-const DECREASE = document.querySelector('.decrease');
-const INCREASE = document.querySelector('.increase');
+const decreaseButton = document.querySelector('.decrease');
+const increaseButton = document.querySelector('.increase');
 const countLabel = document.querySelector('.countLabel');
-const RESET = document.querySelector('.reset');
+const resetButton = document.querySelector('.reset');
 
 
-let counter = 0;
+let actualValue = 0;
+const MAX_VALUE = 999;
+const MIN_VALUE = -999;
 
-function updateCounter(count) {     //UPDATES AND SHOW THE COUNTER VALUE
-    counter = count;            
-    countLabel.innerHTML = count;
-}
+function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALUE
+    actualValue = newCount;
+    countLabel.textContent = newCount;
+
+    resetLabelCounter(actualValue);
+};
+
+function resetLabelCounter(limitValue) {    //SESETS THE COUNTER VALUE IF UNDER -999 / OVER 999
+    if (limitValue === MAX_VALUE || limitValue === MIN_VALUE)  {
+        actualValue = 0;
+        countLabel.textContent = actualValue;
+    }
+};
 
 
-DECREASE.addEventListener('click', () => {      //DECREASE THE COUNTER VALUE
-    updateCounter(counter - 1)
+decreaseButton.addEventListener('click', () => {      //DECREASE THE COUNTER VALUE
+    updateLabelCounter(actualValue - 1)
 });
 
-INCREASE.addEventListener('click', () => {      //INCREASE THE COUNTER VALUE
-    updateCounter(counter + 1)
+increaseButton.addEventListener('click', () => {      //INCREASE THE COUNTER VALUE
+    updateLabelCounter(actualValue + 1)
 });
 
-RESET.addEventListener('click', () => {     //RESET THE COUNTER VALUE
-    updateCounter(0)
+resetButton.addEventListener('click', () => {     //RESET THE COUNTER VALUE
+    updateLabelCounter(0)
 });

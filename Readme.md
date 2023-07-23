@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/DHrdo/Counter-Project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Counter</h3>
@@ -178,7 +178,7 @@ Project Link: [https://github.com/DHrdo/Counter-Project](https://github.com/DHrd
 [license-url]: https://github.com/DHrdo/Counter-Project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/denis-accardo-806907135/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: /assets/images/project-screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

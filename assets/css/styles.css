@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'comfortaa';
+    src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    background-color: unset;
+    border: unset;
+}
+
+
+
+/*----------------MOBILE----------------*/
+body {
+    background-color: #FFF3F5;
+}
+
+.main {
+    position: relative;
+    display: flex;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container button .arrow-up {
+    margin-bottom: 20px;
+    opacity: 0.6;
+    width: 16vw;
+}
+
+
+.container .counter {
+    background-color: #FF4957;
+    border-radius: 20px;
+    width: 120px;
+    height: 120px;
+
+    box-shadow: -1px 57px 80px -17px rgba(255, 73, 87, 0.25);
+    z-index: 2;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.container .counter p {
+    font-size: 4.5em;
+    font-family: 'comfortaa';
+    text-align: center;
+    padding: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+}
+
+.container button .arrow-down {
+    opacity: 0.6;
+    width: 16vw;
+    rotate: 180deg;
+    margin-top: 22px;
+}
+
+.container .counter .reset {
+    width: 40px;
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+/*----------------MEDIA QUERIES----------------*/
+
+/*BIG MOBILE SCREEN*/
+@media screen and (min-width: 480px) {
+
+    .container button .arrow-up,
+    .container button .arrow-down {
+        width: 10vw;
+    }
+}
+
+/*TABLET MEDIA QUERY*/
+@media screen and (min-width: 768px) {
+
+    main .container .counter:hover::after {
+        content: 'Reset';
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        background-color: #fdf2f3;
+        font-size: 4em;
+        font-family: 'comfortaa';
+
+        -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    }
+
+    .container .counter {
+        width: 220px;
+        height: 220px;
+    }
+
+    .container button .arrow-up,
+    .container button .arrow-down {
+        width: 12vw;
+    }
+}
+
+/*SMALL DEKSTOP MEDIA QUERY*/
+@media screen and (min-width: 1024px) {
+
+    .container button .arrow-up,
+    .container button .arrow-down {
+        width: 8vw;
+    }
+}
+
+/*BIG (2K) DEKSTOP MEDIA QUERY*/
+@media screen and (min-width: 1440px) {
+
+    .container button .arrow-up,
+    .container button .arrow-down {
+        width: 6vw;
+    }
+}
+
+/*BIG (4K) DEKSTOP MEDIA QUERY*/
+@media screen and (min-width: 2560px) {
+
+    .container button .arrow-up,
+    .container button .arrow-down {
+        width: 4vw;
+    }
+}
+
+
+/*ANINAMTIONS*/
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}

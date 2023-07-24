@@ -19,7 +19,7 @@ button {
 
 /*----------------MOBILE----------------*/
 body {
-    background-color: #FFF3F5;
+    background-color: #0997E0
 }
 
 .main {
@@ -62,7 +62,7 @@ body {
 }
 
 .container .counter p {
-    font-size: 4.5em;
+    font-size: 2.7em;
     font-family: 'comfortaa';
     text-align: center;
     padding: 10px;
@@ -134,6 +134,10 @@ body {
     .container button .arrow-down {
         width: 12vw;
     }
+
+    .container .counter p {
+        font-size: 4em;
+    }
 }
 
 /*SMALL DEKSTOP MEDIA QUERY*/
@@ -142,6 +146,10 @@ body {
     .container button .arrow-up,
     .container button .arrow-down {
         width: 8vw;
+    }
+
+    .container .counter p {
+        font-size: 5em;
     }
 }
 

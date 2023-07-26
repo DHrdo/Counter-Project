@@ -19,7 +19,7 @@
 <h3 align="center">Counter</h3>
 
   <p align="center">
-    This is a simple project of a counter that with two buttons increments or decrements a displayed number.
+        Hello everyone!!! This is the final project of the Javascript Basics section of Start2Impact, it is a simple project of a counter that with two buttons increments or decrements a displayed number.
     <br />
     <a href="https://github.com/DHrdo/Counter-Project"><strong>Explore the docs »</strong></a>
     <br />

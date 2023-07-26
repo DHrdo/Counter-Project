@@ -1,9 +1,49 @@
 let countLabel;
 let actualValue = 0;
 const MAX_VALUE = 999;
-const MIN_VALUE = -999;
+const MIN_VALUE = 0;
 
 
+createElements('main', 'body');
+createElements('div', document.querySelector('main'), null, null, ['container']);
+createElements('button', document.querySelector('.container'), null, null, null, 'buttonUp');
+createElements('img', document.querySelector('#buttonUp'), '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase']);
+createElements('div', document.querySelector('.container'), null, null, ['counter', 'reset']);
+createElements('p', document.querySelector('.counter'), null, null, ['countLabel'], null, '0');
+
+createElements('button', document.querySelector('.container'), null, null, null, 'buttonDown');
+createElements('img', document.querySelector('#buttonDown'), '/assets/images/arrow-up.svg', 'arrow down', ['arrow-down', 'decrease']);
+
+//THIS FUNCTION CREATES THE PAGE STRUCTURE
+function createElements(eTag, eParent, eSrc = '', eAlt = '', eClass = [], eId = '', eContent = '') {
+
+    const element = document.createElement(eTag);
+
+    if (eParent === 'body') {
+        document.body.append(element);
+    } else {
+        eParent.append(element);
+    }
+
+    if (eSrc) {
+        element.src = eSrc;
+    }
+    if (eAlt) {
+        element.alt = eAlt;
+    }
+    if (eClass && Array.isArray(eClass)) {
+        eClass.forEach(cls => {
+            element.classList.add(cls);
+        });
+    }
+    if (eId) {
+        element.setAttribute('id', eId);
+    }
+
+    if (eContent) {
+        element.textContent = eContent;
+    }
+};
 
 function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALUE
     actualValue = newCount;
@@ -13,48 +53,14 @@ function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALU
 };
 
 function resetLabelCounter(limitValue) {    //RESETS THE COUNTER VALUE IF UNDER -999 / OVER 999
-    if (limitValue === MAX_VALUE || limitValue === MIN_VALUE) {
+    if (limitValue > MAX_VALUE || limitValue <= MIN_VALUE) {
         actualValue = 0;
         countLabel.innerHTML = actualValue;
     }
 };
 
-function renderCounter() {      //THIS FUNCTION RENDERS THE PAGE STRUCTURE
-    const main = document.createElement('main');
-    const divContainer = document.createElement('div');
-    const buttonUp = document.createElement('button');
-    const imgArrowUp = document.createElement('img');
-    const imgArrowDown = document.createElement('img');
-    const counterContainer = document.createElement('div');
-    const counterLabel = document.createElement('p');
-    const buttonDown = document.createElement('button');
-
-    document.body.appendChild(main);
-    divContainer.classList.add('container');
-    main.appendChild(divContainer);
-    divContainer.appendChild(buttonUp);
-    imgArrowUp.src = '/assets/images/arrow-up.svg';
-    imgArrowUp.alt = 'arrow up';
-    imgArrowUp.classList.add('arrow-up', 'increase');
-    buttonUp.appendChild(imgArrowUp);
-
-    counterContainer.classList.add('counter', 'reset');
-    divContainer.appendChild(counterContainer);
-
-    counterLabel.classList.add('countLabel');
-    counterLabel.textContent = '0';
-
-    counterContainer.appendChild(counterLabel);
-
-    divContainer.appendChild(buttonDown);
-    imgArrowDown.src = '/assets/images/arrow-up.svg';
-    imgArrowDown.alt = 'arrow down';
-    imgArrowDown.classList.add('arrow-down', 'decrease');
-    buttonDown.appendChild(imgArrowDown);
-};
 
 window.onload = function () {   //THIS FUNCTION LOADS THE EVENTS ONLY WHEN THE PAGE STRUCTURE IS FULLY LOADED
-    renderCounter();
 
     const decrease = document.querySelector('.decrease');
     const increase = document.querySelector('.increase');

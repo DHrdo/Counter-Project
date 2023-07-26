@@ -1,13 +1,5 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -106,8 +98,8 @@ This counter could be used whenever you need to count the times you perform a ce
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ Increase/Decrease the counter value ] Feature 1
-- [ Reset the counter value ] Feature 2
+- [ ] Increase/Decrease counter
+- [ ] Reset counter
 
 See the [open issues](https://github.com/DHrdo/Counter-Project/issues) for a full list of proposed features (and known issues).
 

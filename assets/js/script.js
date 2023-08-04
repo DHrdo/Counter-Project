@@ -5,7 +5,7 @@ const MIN_VALUE = 0;
 
 
 createElements('main', 'body');
-createElements('div', document.querySelector('main'), null, null, ['container']);
+createElements('div', 'body', null, null, ['container']);
 createElements('button', document.querySelector('.container'), null, null, null, 'buttonUp');
 createElements('img', document.querySelector('#buttonUp'), '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase']);
 createElements('div', document.querySelector('.container'), null, null, ['counter', 'reset']);
@@ -41,7 +41,7 @@ function createElements(eTag, eParent, eSrc = '', eAlt = '', eClass = [], eId = 
     }
 
     if (eContent) {
-        element.textContent = eContent;
+        element.insertAdjacentHTML('afterbegin', eContent);
     }
 };
 
@@ -52,7 +52,7 @@ function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALU
     resetLabelCounter(actualValue);
 };
 
-function resetLabelCounter(limitValue) {    //RESETS THE COUNTER VALUE IF UNDER -999 / OVER 999
+function resetLabelCounter(limitValue) {    //RESETS THE COUNTER VALUE IF UNDER OR EQUAL 0 / OVER 999
     if (limitValue > MAX_VALUE || limitValue <= MIN_VALUE) {
         actualValue = 0;
         countLabel.innerHTML = actualValue;

@@ -131,7 +131,7 @@ Don't forget to give the project a star! Thanks again!
 
 Denis Accardo - accardo.denisalex@gmail.com
 
-Project Link: [https://github.com/DHrdo/Counter-Project](https://github.com/DHrdo/Counter-Project)
+Project Link: [https://counter-project-mu.vercel.app](https://counter-project-mu.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

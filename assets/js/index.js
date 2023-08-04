@@ -52,6 +52,7 @@ function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALU
     resetLabelCounter(actualValue);
 };
 
+
 function resetLabelCounter(limitValue) {    //RESETS THE COUNTER VALUE IF UNDER OR EQUAL 0 / OVER 999
     if (limitValue > MAX_VALUE || limitValue <= MIN_VALUE) {
         actualValue = 0;

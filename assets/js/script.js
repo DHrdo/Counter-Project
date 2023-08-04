@@ -5,7 +5,7 @@ const MIN_VALUE = 0;
 
 
 createElements('main', 'body');
-createElements('div', 'body', null, null, ['container']);
+createElements('div', document.querySelector('main'), null, null, ['container']);
 createElements('button', document.querySelector('.container'), null, null, null, 'buttonUp');
 createElements('img', document.querySelector('#buttonUp'), '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase']);
 createElements('div', document.querySelector('.container'), null, null, ['counter', 'reset']);

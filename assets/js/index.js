@@ -3,19 +3,18 @@ let actualValue = 0;
 const MAX_VALUE = 999;
 const MIN_VALUE = 0;
 
-
 createElements('main', 'body');
 createElements('div', document.querySelector('main'), null, null, ['container']);
 createElements('button', document.querySelector('.container'), null, null, null, 'buttonUp');
-createElements('img', document.querySelector('#buttonUp'), '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase']);
+createElements('img', document.querySelector('#buttonUp'), '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase'], null, null, 'increase');
 createElements('div', document.querySelector('.container'), null, null, ['counter', 'reset']);
 createElements('p', document.querySelector('.counter'), null, null, ['countLabel'], null, '0');
 
 createElements('button', document.querySelector('.container'), null, null, null, 'buttonDown');
-createElements('img', document.querySelector('#buttonDown'), '/assets/images/arrow-up.svg', 'arrow down', ['arrow-down', 'decrease']);
+createElements('img', document.querySelector('#buttonDown'), '/assets/images/arrow-up.svg', 'arrow down', ['arrow-down', 'decrease'], null, null, 'decrease');
 
 //THIS FUNCTION CREATES THE PAGE STRUCTURE
-function createElements(eTag, eParent, eSrc = '', eAlt = '', eClass = [], eId = '', eContent = '') {
+function createElements(eTag, eParent, eSrc = '', eAlt = '', eClass = [], eId = '', eContent = '', eDataAction = '') {
 
     const element = document.createElement(eTag);
 
@@ -43,6 +42,10 @@ function createElements(eTag, eParent, eSrc = '', eAlt = '', eClass = [], eId = 
     if (eContent) {
         element.insertAdjacentHTML('afterbegin', eContent);
     }
+
+    if (eDataAction) {
+        element.setAttribute('data-action', eDataAction);
+    }
 };
 
 function updateLabelCounter(newCount) {     //UPDATES AND SHOWS THE COUNTER VALUE
@@ -68,15 +71,19 @@ window.onload = function () {   //THIS FUNCTION LOADS THE EVENTS ONLY WHEN THE P
     countLabel = document.querySelector('.countLabel');
     const reset = document.querySelector('.reset');
 
-    decrease.addEventListener('click', () => {      //DECREASE THE COUNTER VALUE
-        updateLabelCounter(actualValue - 1)
-    });
 
-    increase.addEventListener('click', () => {      //INCREASE THE COUNTER VALUE
-        updateLabelCounter(actualValue + 1)
-    });
+    // EVENT DELEGATION *( FEEDBACK FIX )*
+    const container = document.querySelector('.container');
+    container.addEventListener('click', (event) => {
+        const action = event.target.dataset.action;
+        if (action === 'decrease') {                    // DECREASE THE COUNTER VALUE
+            updateLabelCounter(actualValue - 1)
 
-    reset.addEventListener('click', () => {     //RESET THE COUNTER VALUE
-        updateLabelCounter(0)
+        } else if (action === 'increase') {          // INCREASE THE COUNTER VALUE
+            updateLabelCounter(actualValue + 1);
+
+        } else if (action === 'reset') {          // RESET THE COUNTER VALUE
+            updateLabelCounter(0)
+        }
     });
 };

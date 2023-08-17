@@ -66,7 +66,6 @@ window.onload = function () {   //THIS FUNCTION LOADS THE EVENTS ONLY WHEN THE P
     createElements('img', buttonUp, '/assets/images/arrow-up.svg', 'arrow up', ['arrow-up', 'increase'], null, null, 'increase');
     const counterAndReset = createElements('div', container, null, null, ['counter', 'reset'], null, null, 'reset');
     createElements('p', counterAndReset, null, null, ['countLabel'], null, '0');
-    
     const buttonDown = createElements('button', container, null, null, null, 'buttonDown');
     createElements('img', buttonDown, '/assets/images/arrow-up.svg', 'arrow down', ['arrow-down', 'decrease'], null, null, 'decrease');
 

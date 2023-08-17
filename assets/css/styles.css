@@ -105,8 +105,7 @@ body {
 }
 
 /*TABLET MEDIA QUERY*/
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 768px) {  
     main .container .counter:hover::after {
         content: 'Reset';
         cursor: pointer;
